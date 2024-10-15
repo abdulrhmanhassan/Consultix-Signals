@@ -30,7 +30,7 @@ class MainScreen extends StatelessWidget {
               height: 50,
             ),
             CustomButton(
-              label: "map",
+              label: "OutDoor Map",
               onPressed: () {
                 Navigator.pushNamed(context, MapScreen.id);
               },
@@ -39,7 +39,7 @@ class MainScreen extends StatelessWidget {
               height: 20,
             ),
             CustomButton(
-              label: "image",
+              label: "InDoor Image",
               onPressed: () {
                 Navigator.pushNamed(context, ImageScreen.id);
               },
