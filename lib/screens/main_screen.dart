@@ -1,7 +1,13 @@
+import 'package:consultix/screens/image_screen.dart';
+import 'package:consultix/screens/map_screen.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/custom_button.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
+
+  static String id = "MainScreen";
 
   @override
   Widget build(BuildContext context) {
@@ -23,19 +29,22 @@ class MainScreen extends StatelessWidget {
             const SizedBox(
               height: 50,
             ),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                elevation: 0,
-              ),
-              child: const Text(
-                'Map',
-                style: TextStyle(fontSize: 16, color: Colors.black),
-              ),
-            )
+            CustomButton(
+              label: "map",
+              onPressed: () {
+                Navigator.pushNamed(context, MapScreen.id);
+              },
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            CustomButton(
+              label: "image",
+              onPressed: () {
+                Navigator.pushNamed(context, ImageScreen.id);
+              },
+            ),
+            const Spacer(flex: 5),
           ],
         ),
       ),
