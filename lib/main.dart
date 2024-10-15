@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+import 'screens/main_screen.dart';
 
-class MyApp extends StatelessWidget {
+void main() {
+  runApp(const Consultix());
+}
+
+class Consultix extends StatelessWidget {
+  const Consultix({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Google Maps Tracking',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(),
+    return const MaterialApp(
+      title: 'Consultix',
+      home: MainScreen(),
     );
   }
 }
