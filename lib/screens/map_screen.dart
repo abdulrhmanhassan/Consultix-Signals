@@ -83,7 +83,8 @@ class _MapScreenState extends State<MapScreen>
 
           polylineCoordinates.add(newPosition);
           //Create a new Polyline based on user coordinates
-          _polylines = PolylineHelper.createPolyline(polylineCoordinates);
+          _polylines =
+              PolylineHelper.createColoredPolyline(polylineCoordinates);
         });
 
         mapController?.animateCamera(CameraUpdate.newLatLng(newPosition));
