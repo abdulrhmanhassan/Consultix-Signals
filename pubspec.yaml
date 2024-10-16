@@ -42,6 +42,9 @@ dependencies:
   geolocator: ^12.0.0
   # showing route/polyline on maps
   flutter_polyline_points: ^2.1.0
+  # pick images
+  image_picker: ^1.1.2
+
 
 dev_dependencies:
   flutter_test:
